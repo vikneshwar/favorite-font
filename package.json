@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "server:local": "nodemon --ignore 'client/' ./bin/www",
+    "server:prod": "node ./bin/www",
+    "client": "cd client && npm start",
+    "client:build": "cd client && npm build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -12,5 +15,8 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
